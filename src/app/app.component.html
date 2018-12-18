@@ -1,20 +1,90 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<mat-toolbar color="primary" class="mat-elevation-z5">
+  ngx-plyr
+</mat-toolbar>
 
+<div class="wrapper mat-typography" fxLayout="column" fxLayoutGap="32px">
+  <h1>ngx-plyr: plyr for angular</h1>
+
+  <p>Here you can find various demos for <a href="https://github.com/smnbbrv/ngx-plyr">ngx-plyr</a></p>
+
+  <mat-card style="width: 640px;">
+    <mat-card-title>Video</mat-card-title>
+    <mat-card-subtitle>Plyr with custom video as a source</mat-card-subtitle>
+
+    <div mat-card-image plyr plyrTitle="Custom video" [plyrPlaysInline]="true" [plyrCrossOrigin]="true"
+      [plyrPoster]="poster" [plyrSources]="videoSources" [plyrTracks]="tracks" (plyrInit)="player = $event"
+      (plyrPlay)="played($event)"></div>
+    <mat-card-actions>
+      <button mat-raised-button color="accent" (click)="play()">
+        <mat-icon>play_arrow</mat-icon>
+        Play
+      </button>
+
+      <button mat-raised-button color="accent" (click)="pause()">
+        <mat-icon>pause</mat-icon>
+        Pause
+      </button>
+
+      <button mat-raised-button color="accent" (click)="stop()">
+        <mat-icon>stop</mat-icon>
+        Stop
+      </button>
+
+      <a mat-raised-button color="primary" href="https://github.com/smnbbrv/ngx-plyr/tree/master/src/app">
+        Source code
+      </a>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card style="width: 640px;">
+    <mat-card-title>Audio</mat-card-title>
+    <mat-card-subtitle>Plyr with audio as a source</mat-card-subtitle>
+
+    <div mat-card-image plyr plyrTitle="Audio" plyrType="audio" [plyrPlaysInline]="true" [plyrCrossOrigin]="true"
+      [plyrSources]="audioSources"></div>
+
+    <mat-card-actions>
+      <a mat-raised-button color="primary" href="https://github.com/smnbbrv/ngx-plyr/tree/master/src/app">Source
+        code</a>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-divider></mat-divider>
+
+  <h2>Youtube and Vimeo</h2>
+
+  <div fxLayout="row" fxLayoutGap="32px">
+    <mat-card style="width: 640px;">
+      <mat-card-title>Youtube</mat-card-title>
+      <mat-card-subtitle>Plyr with Yotube video as a source</mat-card-subtitle>
+
+      <div mat-card-image plyr plyrTitle="Video from Youtube" [plyrSources]="youtubeSources">
+      </div>
+
+      <mat-card-actions>
+        <a mat-raised-button color="primary" href="https://github.com/smnbbrv/ngx-plyr/tree/master/src/app">Source
+          code</a>
+      </mat-card-actions>
+    </mat-card>
+
+    <mat-card style="width: 640px;">
+      <mat-card-title>Vimeo</mat-card-title>
+      <mat-card-subtitle>Plyr with Vimeo video as a source</mat-card-subtitle>
+
+      <div mat-card-image plyr plyrTitle="Video from Vimeo" [plyrSources]="vimeoSources"></div>
+
+      <mat-card-actions>
+        <a mat-raised-button color="primary" href="https://github.com/smnbbrv/ngx-plyr/tree/master/src/app">Source
+          code</a>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <app-hlsjs></app-hlsjs>
+
+  <mat-divider></mat-divider>
+
+  <app-dashjs></app-dashjs>
+</div>
