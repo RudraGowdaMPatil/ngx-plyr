@@ -9,16 +9,16 @@
     "video",
     "audio"
   ],
-  "author": "smnbbrv",
+  "author": "RudraGowda M Patil",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/smnbbrv/ngx-plyr"
+    "url": "https://github.com/RudraGowdaMPatil/ngx-plyr"
   },
   "peerDependencies": {
     "@angular/common": ">=8.0.0",
     "@angular/core": ">=8.0.0",
-    "plyr": "^3.5.10"
+    "plyr": "^3.7.8"
   },
   "publishConfig": {
     "access": "public"

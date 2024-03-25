@@ -1,8 +1,9 @@
-# Deprecated: not maintained
+# NGX plyr MG | Angular 16
+## Forked from smnbbrv/ngx-plyr, but this version supports angular +14
 
 ## ngx-plyr
 
-Angular 6+ bindings for [plyr video and audio player](https://github.com/sampotts/plyr). Supports everything that original library supports.
+Angular 14+ bindings for [plyr video and audio player](https://github.com/sampotts/plyr). Supports everything that original library supports.
 
 ![Workflow status](https://img.shields.io/github/workflow/status/smnbbrv/ngx-plyr/Push)
 [![Coverage Status](https://img.shields.io/coveralls/github/smnbbrv/ngx-plyr/master.svg)](https://coveralls.io/github/smnbbrv/ngx-plyr?branch=master)
