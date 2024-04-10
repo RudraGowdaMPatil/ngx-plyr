@@ -1,4 +1,4 @@
-# NGX plyr MG | Angular 16
+# Atom NGX plyr | Angular 14
 ## Forked from smnbbrv/ngx-plyr, but this version supports angular +14
 
 ## ngx-plyr

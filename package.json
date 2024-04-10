@@ -12,9 +12,14 @@
     "test:lib:ci": "ng test ngx-plyr --watch=false --progress=false --browsers=ChromeHeadlessCI --code-coverage",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "release": "semantic-release"
+    "npm-pack": "cd dist/ngx-plyr && npm pack",
+    "package": "npm run build:lib && npm run npm-pack",
+    "publish": "npm publish dist/ngx-plyr --access public",
+    "version-major": "cd projects/ngx-plyr && npm version major && cd ../.. && git add . && git commit -m \"updating lib version\" && npm version major",
+    "version-minor": "cd projects/ngx-plyr && npm version minor && cd ../.. && git add . && git commit -m \"updating lib version\" && npm version minor",
+    "version-patch": "cd projects/ngx-plyr && npm version patch && cd ../.. && git add . && git commit -m \"updating lib version\" && npm version patch"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "^14.3.0",
     "@angular/cdk": "^14.2.7",
@@ -46,8 +51,6 @@
     "@angular/cli": "^14.2.13",
     "@angular/compiler-cli": "^14.3.0",
     "@angular/language-service": "^14.3.0",
-    "@semantic-release/changelog": "^3.0.4",
-    "@semantic-release/git": "^7.0.16",
     "@types/jasmine": "^3.3.14",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
