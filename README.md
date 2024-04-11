@@ -1,5 +1,5 @@
-# Atom NGX plyr | Angular 15
-## Forked from smnbbrv/ngx-plyr, but this version supports angular 15+
+# Atom NGX plyr | Angular 16
+## Forked from smnbbrv/ngx-plyr, but this version supports angular 16+
 
 ## ngx-plyr
 
