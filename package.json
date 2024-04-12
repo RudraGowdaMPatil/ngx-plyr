@@ -1,6 +1,6 @@
 {
   "name": "ngx-plyr-app",
-  "version": "16.2.12",
+  "version": "17.3.4",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
